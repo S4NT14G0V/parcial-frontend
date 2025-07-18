@@ -1,4 +1,4 @@
-import { apiConfigV1 } from '@/config/apiConfig';
+import { apiConfigV1,apiConfigV2 } from '@/config/apiConfig';
 
 export const getOrderById = async (id) => {
   const res = await fetch(`${apiConfigV1.baseUrl}/orders/${id}`, {
@@ -46,3 +46,20 @@ export const getAllOrders = async () => {
 };
 
 
+
+export const getAllOrders2 = async () => {
+  const res = await fetch(`${apiConfigV2.baseUrl}/orders`, {
+    headers: apiConfigV2.headers,
+    cache: 'no-store',
+  });
+  console.log("result: ", res);
+
+  if (!res.ok) {
+    throw new Error(`Error al obtener pedidos: ${res.statusText}`);
+  }
+
+  const data = await res.json();
+  console.log("Pedidos recibidos del backend:", data);
+
+  return data;
+};

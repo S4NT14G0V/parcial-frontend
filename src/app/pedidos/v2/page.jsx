@@ -1,8 +1,8 @@
-import { getAllOrders } from '@/services/pedidoService';
+import { getAllOrders2 } from '@/services/pedidoService';
 import OrderInfo from '@/components/pedidoInfo';
 
 export default async function OrdersPage() {
-  const pedidos = await getAllOrders();
+  const pedidos = await getAllOrders2();
 
   return (
     <main className="p-8 space-y-4">

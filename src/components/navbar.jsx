@@ -19,12 +19,7 @@ export default function Navbar() {
           >
             Pedidos v1
           </Link>
-          <Link
-            href="/pedidos/v1/add"
-            className={startsWith("/pedidos/v1/add") ? "bg-slate-950/90 text-white p-2 rounded-md" : "text-slate-950/90 hover:bg-slate-800 hover:text-white transition-colors p-2 rounded-md"}
-          >
-            Nuevo Pedido v1
-          </Link>
+         
         </div>
 
         {/* Grupo V2 */}
@@ -35,12 +30,7 @@ export default function Navbar() {
           >
             Pedidos v2
           </Link>
-          <Link
-            href="/pedidos/v2/add"
-            className={startsWith("/pedidos/v2/add") ? "bg-slate-950/90 text-white p-2 rounded-md" : "text-slate-950/90 hover:bg-slate-800 hover:text-white transition-colors p-2 rounded-md"}
-          >
-            Nuevo Pedido v2
-          </Link>
+          
         </div>
       </div>
     </nav>
